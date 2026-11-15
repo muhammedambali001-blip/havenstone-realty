@@ -1,0 +1,82 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "elegant luxury living room interior with large windows and sofas"
+✅ Got 10 images
+{
+  "success": true,
+  "query": "elegant luxury living room interior with large windows and sofas",
+  "count": 10,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/dcedff8c9d17.jpg",
+      "caption": "",
+      "source": "Architectural Digest",
+      "original_width": "8688px",
+      "original_height": "4887px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/658fefce4720.jpg",
+      "caption": "",
+      "source": "Saloni Furniture",
+      "original_width": "2400px",
+      "original_height": "1602px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b1ebb6d771cc.jpg",
+      "caption": "",
+      "source": "House Beautiful",
+      "original_width": "1120px",
+      "original_height": "1117px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0a27e8f2d90b.png",
+      "caption": "",
+      "source": "Nolita Harbour",
+      "original_width": "1500px",
+      "original_height": "984px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f8b46cec2557.jpg",
+      "caption": "",
+      "source": "Harmony Home Design",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/81403844b900.jpg",
+      "caption": "",
+      "source": "Pinterest",
+      "original_width": "736px",
+      "original_height": "1308px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/31d493831e95.jpg",
+      "caption": "",
+      "source": "Unsplash",
+      "original_width": "3000px",
+      "original_height": "1998px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4a2d8bf6d278.jpg",
+      "caption": "",
+      "source": "Livarea",
+      "original_width": "1696px",
+      "original_height": "2528px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cee97ed5ebf1.jpg",
+      "caption": "",
+      "source": "Dreamstime",
+      "original_width": "1600px",
+      "original_height": "990px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5f2643cf5a8f.jpg",
+      "caption": "",
+      "source": "Stylish Club",
+      "original_width": "1920px",
+      "original_height": "1080px"
+    }
+  ]
+}

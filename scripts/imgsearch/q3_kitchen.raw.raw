@@ -1,0 +1,82 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "modern luxury kitchen interior with marble island"
+✅ Got 10 images
+{
+  "success": true,
+  "query": "modern luxury kitchen interior with marble island",
+  "count": 10,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5b442d963153.jpg",
+      "caption": "",
+      "source": "House Beautiful",
+      "original_width": "1120px",
+      "original_height": "1121px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d3f9a730f839.jpg",
+      "caption": "",
+      "source": "ELLE Decor",
+      "original_width": "2500px",
+      "original_height": "1914px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/073a78575d8f.jpg",
+      "caption": "",
+      "source": "Pinterest",
+      "original_width": "736px",
+      "original_height": "1104px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/26a727cf816c.jpg",
+      "caption": "",
+      "source": "ELLE Decor",
+      "original_width": "9542px",
+      "original_height": "6364px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/89eb3d173400.jpg",
+      "caption": "",
+      "source": "Alibaba.com",
+      "original_width": "960px",
+      "original_height": "960px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4db8c7dbb0e0.jpg",
+      "caption": "",
+      "source": "ELLE Decor",
+      "original_width": "1200px",
+      "original_height": "675px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6bdf0db97d8a.png",
+      "caption": "",
+      "source": "Haus of Marble",
+      "original_width": "1454px",
+      "original_height": "1370px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a4642a639829.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "959px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c423c54956e6.jpg",
+      "caption": "",
+      "source": "Marble Benchtops Hub",
+      "original_width": "2000px",
+      "original_height": "1333px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/08d509d1fbb5.png",
+      "caption": "",
+      "source": "Haus of Marble",
+      "original_width": "2272px",
+      "original_height": "2048px"
+    }
+  ]
+}

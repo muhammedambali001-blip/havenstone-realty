@@ -1,0 +1,68 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "modern duplex house exterior white contemporary architecture"
+✅ Got 8 images
+{
+  "success": true,
+  "query": "modern duplex house exterior white contemporary architecture",
+  "count": 8,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/84b9fa7dc038.jpg",
+      "caption": "",
+      "source": "Build Green New Homes",
+      "original_width": "896px",
+      "original_height": "1344px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/38b757910018.jpg",
+      "caption": "",
+      "source": "Build Green New Homes",
+      "original_width": "1500px",
+      "original_height": "2250px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9f02ca65b25f.jpg",
+      "caption": "",
+      "source": "The House Designers",
+      "original_width": "1000px",
+      "original_height": "800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/25c8cb6563ce.jpg",
+      "caption": "",
+      "source": "Homes and Gardens",
+      "original_width": "1200px",
+      "original_height": "675px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fc2a9c0f76f7.jpg",
+      "caption": "",
+      "source": "America's Best House Plans",
+      "original_width": "1200px",
+      "original_height": "800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bd4b093c3ea0.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "957px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/47c99be24b24.jpeg",
+      "caption": "",
+      "source": "Stonelam",
+      "original_width": "1300px",
+      "original_height": "628px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/73f1733acd97.jpg",
+      "caption": "",
+      "source": "Contemporist",
+      "original_width": "800px",
+      "original_height": "1094px"
+    }
+  ]
+}

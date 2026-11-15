@@ -1,0 +1,75 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "stunning luxury modern mansion exterior with swimming pool"
+✅ Got 9 images
+{
+  "success": true,
+  "query": "stunning luxury modern mansion exterior with swimming pool",
+  "count": 9,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/236c121eb91d.jpg",
+      "caption": "",
+      "source": "Pinterest",
+      "original_width": "735px",
+      "original_height": "1103px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f42d4fd09f6a.jpg",
+      "caption": "",
+      "source": "Dreamstime",
+      "original_width": "1600px",
+      "original_height": "1690px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ccc603c6f564.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "758px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7f972f5618ff.jpg",
+      "caption": "",
+      "source": "Build Green New Homes",
+      "original_width": "1500px",
+      "original_height": "2250px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/aaa9274f5189.jpg",
+      "caption": "",
+      "source": "Lakeland Custom Homes",
+      "original_width": "2048px",
+      "original_height": "1536px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/dda5ef07b43d.jpeg",
+      "caption": "",
+      "source": "LUXE Interiors + Design",
+      "original_width": "1159px",
+      "original_height": "1500px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2c07851d381c.jpg",
+      "caption": "",
+      "source": "Dreamstime",
+      "original_width": "1600px",
+      "original_height": "989px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/36ef31729bb2.jpg",
+      "caption": "",
+      "source": "Mansion Global",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/db6d51c60e5a.jpg",
+      "caption": "",
+      "source": "Pinterest",
+      "original_width": "736px",
+      "original_height": "1308px"
+    }
+  ]
+}

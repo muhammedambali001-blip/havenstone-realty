@@ -1,0 +1,82 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "luxury apartment building exterior residential towers"
+✅ Got 10 images
+{
+  "success": true,
+  "query": "luxury apartment building exterior residential towers",
+  "count": 10,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2b294dd70d9f.jpg",
+      "caption": "",
+      "source": "The LX Collection",
+      "original_width": "1000px",
+      "original_height": "1330px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/afac74e759fa.jpg",
+      "caption": "",
+      "source": "PaperCity Magazine",
+      "original_width": "997px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fbb214fd5c47.jpg",
+      "caption": "",
+      "source": "The Skyscraper Museum",
+      "original_width": "2550px",
+      "original_height": "2550px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ef519bdaa400.jpg",
+      "caption": "",
+      "source": "The Henry",
+      "original_width": "6998px",
+      "original_height": "4726px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/df6e66c0d87e.jpg",
+      "caption": "",
+      "source": "PR Newswire",
+      "original_width": "2699px",
+      "original_height": "2135px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fac8249fe6cc.jpg",
+      "caption": "",
+      "source": "Dreamstime",
+      "original_width": "1600px",
+      "original_height": "1157px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/70c18651ed82.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d20fdf96a11d.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9a578ca21a81.jpg",
+      "caption": "",
+      "source": "Justin Jamison, SERHANT.",
+      "original_width": "1216px",
+      "original_height": "1621px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8b3c6e8aeca2.jpg",
+      "caption": "",
+      "source": "Pinterest",
+      "original_width": "735px",
+      "original_height": "1307px"
+    }
+  ]
+}

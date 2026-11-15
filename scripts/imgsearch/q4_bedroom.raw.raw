@@ -1,0 +1,75 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "luxury master bedroom interior design warm elegant"
+✅ Got 9 images
+{
+  "success": true,
+  "query": "luxury master bedroom interior design warm elegant",
+  "count": 9,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a1df3f807860.jpg",
+      "caption": "",
+      "source": "ELLE Decor",
+      "original_width": "1500px",
+      "original_height": "1875px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b47ce6b43341.jpg",
+      "caption": "",
+      "source": "Pinterest",
+      "original_width": "735px",
+      "original_height": "1105px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2626f1ecd6c8.png",
+      "caption": "",
+      "source": "Boca do Lobo",
+      "original_width": "2000px",
+      "original_height": "1250px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/dab889bfbf31.jpg",
+      "caption": "",
+      "source": "Homes and Gardens",
+      "original_width": "3200px",
+      "original_height": "1800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/eec52ea81c0c.jpg",
+      "caption": "",
+      "source": "Sonno Beds",
+      "original_width": "1800px",
+      "original_height": "1651px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6c89a6f2ab6c.jpg",
+      "caption": "",
+      "source": "KreateCube",
+      "original_width": "1200px",
+      "original_height": "900px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d5620bb8f040.jpg",
+      "caption": "",
+      "source": "Hommés Studio",
+      "original_width": "1024px",
+      "original_height": "768px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fc1c201ab465.jpg",
+      "caption": "",
+      "source": "House Beautiful",
+      "original_width": "1036px",
+      "original_height": "1289px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ffe342ddc303.jpg",
+      "caption": "",
+      "source": "Veranda",
+      "original_width": "6608px",
+      "original_height": "4352px"
+    }
+  ]
+}

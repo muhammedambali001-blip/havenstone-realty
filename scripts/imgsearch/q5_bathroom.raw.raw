@@ -1,0 +1,82 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "modern luxury bathroom with marble and freestanding bathtub"
+✅ Got 10 images
+{
+  "success": true,
+  "query": "modern luxury bathroom with marble and freestanding bathtub",
+  "count": 10,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d420cb51d35f.jpg",
+      "caption": "",
+      "source": "Overstock",
+      "original_width": "3000px",
+      "original_height": "3000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5ee61340e809.jpg",
+      "caption": "",
+      "source": "Bilotta Kitchens",
+      "original_width": "1920px",
+      "original_height": "1287px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d067e3b25e77.jpg",
+      "caption": "",
+      "source": "Giving Tree Home",
+      "original_width": "1100px",
+      "original_height": "1100px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d1aa57a4764b.jpg",
+      "caption": "",
+      "source": "Elite Bathtub",
+      "original_width": "2850px",
+      "original_height": "1500px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2f3c82e54dcb.jpg",
+      "caption": "",
+      "source": "Dreamstime",
+      "original_width": "1600px",
+      "original_height": "987px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/91dcb322da38.png",
+      "caption": "",
+      "source": "Perimost",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d1144f4522fb.png",
+      "caption": "",
+      "source": "Luxury Marble & Natural Stone Interiors | ExecHomes&Co",
+      "original_width": "1254px",
+      "original_height": "1254px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/42c293fd94e7.jpg",
+      "caption": "",
+      "source": "Caron Stone",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/046ac368d344.webp",
+      "caption": "",
+      "source": "Bathify USA",
+      "original_width": "1500px",
+      "original_height": "837px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c96a979ea8ba.jpg",
+      "caption": "",
+      "source": "MEG Custom Marble By Ziynet A. LLC",
+      "original_width": "1680px",
+      "original_height": "1530px"
+    }
+  ]
+}
