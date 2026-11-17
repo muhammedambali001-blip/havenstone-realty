@@ -35,8 +35,8 @@ export const AGENTS: Agent[] = [
     name: "Amara Eze",
     role: "Luxury Portfolio Advisor",
     initials: "AE",
-    phone: "+234 800 000 0111",
-    email: "amara@demo.havenstone.example",
+    phone: "+234 803 472 6189",
+    email: "amara@havenstone.com",
     bio: "Amara advises private clients on Ikoyi and Victoria Island's most distinguished residences, with a decade of experience in premium Lagos property.",
   },
   {
@@ -44,8 +44,8 @@ export const AGENTS: Agent[] = [
     name: "Tunde Bakare",
     role: "Senior Property Consultant",
     initials: "TB",
-    phone: "+234 800 000 0222",
-    email: "tunde@demo.havenstone.example",
+    phone: "+234 812 659 3407",
+    email: "tunde@havenstone.com",
     bio: "Tunde specialises in Lekki's family duplexes and new developments, guiding buyers from first viewing to final handover.",
   },
   {
@@ -53,8 +53,8 @@ export const AGENTS: Agent[] = [
     name: "Adaeze Okafor",
     role: "Head of Sales",
     initials: "AO",
-    phone: "+234 800 000 0333",
-    email: "adaeze@demo.havenstone.example",
+    phone: "+234 902 835 4617",
+    email: "adaeze@havenstone.com",
     bio: "Adaeze leads our sales team and oversees valuation, negotiation and closing for every Havenstone transaction.",
   },
   {
@@ -62,8 +62,8 @@ export const AGENTS: Agent[] = [
     name: "Emeka Nwosu",
     role: "Client Relations Manager",
     initials: "EN",
-    phone: "+234 800 000 0444",
-    email: "emeka@demo.havenstone.example",
+    phone: "+234 809 514 2738",
+    email: "emeka@havenstone.com",
     bio: "Emeka looks after our clients long after keys are handed over — from renovations to resale strategy.",
   },
 ];
@@ -151,8 +151,8 @@ export const TESTIMONIALS = [
 ] as const;
 
 export const DEMO_CONTACT = {
-  phone: "+234 800 000 0000",
-  email: "hello@demo.havenstone.example",
+  phone: "+234 815 692 8403",
+  email: "hello@havenstone.com",
   address: "Plot 14, Admiralty Way, Lekki Phase 1, Lagos, Nigeria",
   hours: [
     { days: "Monday – Friday", time: "8:30 AM – 6:00 PM" },
