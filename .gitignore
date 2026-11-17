@@ -54,3 +54,6 @@ server.log
 /skills/
 # image-search intermediates
 scripts/imgsearch*/
+# runtime artifacts
+/db/*.db
+/download/
