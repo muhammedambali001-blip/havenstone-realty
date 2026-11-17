@@ -162,6 +162,14 @@ export function Footer() {
             © {new Date().getFullYear()} Havenstone Realty. A fictional agency created for a
             website design demonstration.
           </p>
+          <a
+            href="https://m-webcraft-studio-1kdt.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-gold"
+          >
+            Designed by M-Webcraft Studio
+          </a>
           <p className="flex items-center gap-2">
             <span className="inline-block h-1.5 w-1.5 rotate-45 bg-gold/70" aria-hidden="true" />
             Luxury Properties · United States
