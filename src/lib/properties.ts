@@ -35,7 +35,7 @@ export const AGENTS: Agent[] = [
     name: "Alexandra Hayes",
     role: "Luxury Portfolio Advisor",
     initials: "AH",
-    phone: "+1 (212) 555-0148",
+    phone: "+1 (646) 382-5907",
     email: "alexandra@havenstone.com",
     bio: "Alexandra advises private clients on Manhattan's and Palm Beach's most distinguished residences, with a decade of experience in premium American property.",
   },
@@ -44,7 +44,7 @@ export const AGENTS: Agent[] = [
     name: "Marcus Bennett",
     role: "Senior Property Consultant",
     initials: "MB",
-    phone: "+1 (310) 555-0163",
+    phone: "+1 (310) 779-2654",
     email: "marcus@havenstone.com",
     bio: "Marcus specializes in Los Angeles' family estates and architectural new builds, guiding buyers from first viewing to final closing.",
   },
@@ -53,7 +53,7 @@ export const AGENTS: Agent[] = [
     name: "Sophia Delgado",
     role: "Head of Sales",
     initials: "SD",
-    phone: "+1 (305) 555-0174",
+    phone: "+1 (305) 614-8829",
     email: "sophia@havenstone.com",
     bio: "Sophia leads our sales team and oversees valuation, negotiation and closing for every Havenstone transaction across Florida's waterfront markets.",
   },
@@ -62,7 +62,7 @@ export const AGENTS: Agent[] = [
     name: "Ethan Caldwell",
     role: "Client Relations Manager",
     initials: "EC",
-    phone: "+1 (970) 555-0119",
+    phone: "+1 (970) 402-6157",
     email: "ethan@havenstone.com",
     bio: "Ethan looks after our clients long after keys are handed over — from mountain retreats to resale strategy.",
   },
@@ -151,7 +151,7 @@ export const TESTIMONIALS = [
 ] as const;
 
 export const DEMO_CONTACT = {
-  phone: "+1 (212) 555-0100",
+  phone: "+1 (212) 941-7306",
   email: "hello@havenstone.com",
   address: "425 Madison Avenue, 28th Floor, New York, NY 10017",
   hours: [
