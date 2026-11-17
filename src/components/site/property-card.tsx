@@ -56,7 +56,7 @@ export function PropertyCard({ property, className }: { property: Property; clas
             <Bath className="h-4 w-4 text-gold" aria-hidden="true" /> {p.bathrooms} Baths
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <Ruler className="h-4 w-4 text-gold" aria-hidden="true" /> {p.sizeSqm.toLocaleString()} m²
+            <Ruler className="h-4 w-4 text-gold" aria-hidden="true" /> {p.sizeSqft.toLocaleString()} sq ft
           </span>
         </div>
         <p className="mt-2 text-[0.78rem] uppercase tracking-[0.12em] text-slate-mute/80">{p.type}</p>

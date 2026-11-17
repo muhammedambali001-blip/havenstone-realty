@@ -40,8 +40,8 @@ const FAQS = [
     a: "On a live site you would call the office line, email the listing agent, or submit the enquiry form on any property page. On this demo, forms simply validate and confirm — nothing is sent.",
   },
   {
-    q: "What documents do I need to rent a home in Lagos?",
-    a: "Typically: valid identification, proof of employment or income, and in many cases one year's rent upfront plus agency and caution fees. A good agent will explain every line item before you commit.",
+    q: "What documents do I need to rent a home in the U.S.?",
+    a: "Typically: photo identification, proof of income (often 30–40× the monthly rent in annual earnings), a credit check, and a security deposit of one to two months' rent. A good agent will explain every line item before you commit.",
   },
   {
     q: "Do you charge buyers a fee?",
@@ -194,7 +194,7 @@ export function ContactView() {
                       type="text"
                       value={values.name}
                       onChange={set("name")}
-                      placeholder="e.g. Chukwuemeka Ojo"
+                      placeholder="e.g. Michael Thompson"
                       className={inputCls("name")}
                       aria-invalid={!!errors.name}
                     />
@@ -224,7 +224,7 @@ export function ContactView() {
                       type="tel"
                       value={values.phone}
                       onChange={set("phone")}
-                      placeholder="+234 8XX XXX XXXX"
+                      placeholder="+1 (555) 000-0000"
                       className={inputCls("phone")}
                       aria-invalid={!!errors.phone}
                     />

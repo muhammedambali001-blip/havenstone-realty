@@ -26,9 +26,9 @@ type Stage =
   | "done";
 
 const WELCOME_CHIPS = ["Looking to Buy", "Looking to Rent", "Common Questions"];
-const LOCATION_CHIPS = ["Lekki", "Victoria Island", "Ikoyi", "Ikeja", "Ajah", "Anywhere"];
-const BUY_BUDGET_CHIPS = ["Under ₦150M", "₦150M – ₦500M", "₦500M – ₦1B", "Above ₦1B"];
-const RENT_BUDGET_CHIPS = ["Under ₦15M / yr", "₦15M – ₦35M / yr", "Above ₦35M / yr"];
+const LOCATION_CHIPS = ["New York", "Los Angeles", "Miami", "Palm Beach", "Aspen", "Anywhere"];
+const BUY_BUDGET_CHIPS = ["Under $3M", "$3M – $8M", "$8M – $15M", "Above $15M"];
+const RENT_BUDGET_CHIPS = ["Under $10K / mo", "$10K – $20K / mo", "Above $20K / mo"];
 const MAIN_CHIPS = ["Book a Viewing", "Talk to an Agent", "Common Questions", "Search Again"];
 const FAQ_CHIPS = [
   "Are these properties real?",
@@ -45,41 +45,59 @@ const FAQ_ANSWERS: Record<string, string> = {
   "What fees do you charge?":
     "On a live agency site, every fee (agency, legal, caution and service charges) is disclosed in writing before you commit. No hidden line items, ever. For this demo, no real fees apply — nothing is actually transacted.",
   "Where are you located?":
-    `Our (fictional) office is at ${DEMO_CONTACT.address}. Office hours are Monday to Friday, 8:30 AM – 6:00 PM, and Saturday 10:00 AM – 4:00 PM. You can always reach the team through the Contact page.`,
+    `Our (fictional) head office is at ${DEMO_CONTACT.address}, with advisors across New York, Los Angeles, Miami, Palm Beach and Aspen. Office hours are Monday to Friday, 9:00 AM – 6:00 PM ET, and Saturday 10:00 AM – 4:00 PM ET. You can always reach the team through the Contact page.`,
+};
+
+const AREA_ALIASES: Record<string, string> = {
+  "new york": "New York",
+  nyc: "New York",
+  manhattan: "New York",
+  brooklyn: "New York",
+  "los angeles": "Los Angeles",
+  la: "Los Angeles",
+  beverly: "Los Angeles",
+  miami: "Miami",
+  brickell: "Miami",
+  "palm beach": "Palm Beach",
+  aspen: "Aspen",
 };
 
 function parseBudget(text: string): { min: number; max: number } | null {
-  const t = text.toLowerCase().replace(/,/g, "");
-  // Converts a captured money token like "150m", "1b", "2.5 billion" to naira.
+  const t = text.toLowerCase().replace(/,/g, "").replace(/\$/g, " ");
+  // Converts a captured money token like "2m", "10k", "1.5 billion" to dollars.
   const unitVal = (cap: string | undefined): number | undefined => {
     if (!cap) return undefined;
     const value = parseFloat(cap.replace(/[^\d.]/g, ""));
     if (Number.isNaN(value)) return undefined;
-    if (cap.includes("b")) return value * 1_000_000_000;
-    if (cap.includes("m")) return value * 1_000_000;
+    const u = cap.trim().slice(-1).toLowerCase();
+    if (cap.includes("billion")) return value * 1_000_000_000;
+    if (cap.includes("million")) return value * 1_000_000;
+    if (u === "b") return value * 1_000_000_000;
+    if (u === "m") return value * 1_000_000;
+    if (u === "k") return value * 1_000;
     return value;
   };
-  const MONEY = "([\\d.]+\\s?(?:billion|million|b|m)?)(?![a-z])";
+  const MONEY = "([\\d.]+\\s?(?:billion|million|k|m|b)?)(?![a-z])";
 
-  const under = t.match(new RegExp(`(?:under|less than|below|up to)\\s*(?:₦|n)?\\s*${MONEY}`));
+  const under = t.match(new RegExp(`(?:under|less than|below|up to)\\s*${MONEY}`));
   if (under) {
     const max = unitVal(under[1]);
     return max !== undefined ? { min: 0, max } : null;
   }
-  const above = t.match(new RegExp(`(?:above|over|more than|from)\\s*(?:₦|n)?\\s*${MONEY}`));
+  const above = t.match(new RegExp(`(?:above|over|more than|from)\\s*${MONEY}`));
   if (above) {
     const min = unitVal(above[1]);
     return min !== undefined ? { min, max: Number.MAX_SAFE_INTEGER } : null;
   }
-  const range = t.match(new RegExp(`${MONEY}\\s*(?:-|–|—|to|and)\\s*(?:₦|n)?\\s*${MONEY}`));
+  const range = t.match(new RegExp(`${MONEY}\\s*(?:-|–|—|to|and)\\s*${MONEY}`));
   if (range) {
     const min = unitVal(range[1]);
     const max = unitVal(range[2]);
     if (min !== undefined && max !== undefined) return { min, max };
   }
-  const single = t.match(new RegExp(`(?:₦|n)?\\s*${MONEY}`));
+  const single = t.match(new RegExp(MONEY));
   const v = unitVal(single?.[1]);
-  if (v !== undefined && v >= 1_000_000) {
+  if (v !== undefined && v >= 5_000) {
     return { min: v * 0.8, max: v * 1.4 };
   }
   return null;
@@ -141,7 +159,7 @@ export function Chatbot() {
     if (!hasOpened) {
       setHasOpened(true);
       pushBot(
-        "Welcome to Havenstone Realty! I'm Ada, your property concierge. I can help you find a home in Lagos, answer questions, or arrange a viewing. How may I help you today?",
+        "Welcome to Havenstone Realty! I'm Ada, your property concierge. I can help you find a home anywhere in the U.S., answer questions, or arrange a viewing. How may I help you today?",
         { chips: WELCOME_CHIPS },
         600
       );
@@ -179,7 +197,7 @@ export function Chatbot() {
 
     if (matches.length === 0) {
       pushBot(
-        `I couldn't find an exact match for that brief — Lagos moves quickly! Here are the closest alternatives I'd recommend, or try widening the budget slightly.`,
+        `I couldn't find an exact match for that brief — the market moves quickly! Here are the closest alternatives I'd recommend, or try widening the budget slightly.`,
         {
           cards: PROPERTIES.filter(
             (p) => (opts.intentKind === "buy" ? p.status === "For Sale" : p.status === "For Rent")
@@ -225,8 +243,8 @@ export function Chatbot() {
     setStage("budget");
     pushBot(
       area
-        ? `Great — ${area} it is! ${area === "Ajah" ? "There is excellent value there." : "A wonderful choice."} Now, roughly what budget are you comfortable with?`
-        : "No problem — I'll show you the finest options across Lagos. What budget range works for you?",
+        ? `Great — ${area} it is! ${area === "Miami" ? "There is excellent value there." : "A wonderful choice."} Now, roughly what budget are you comfortable with?`
+        : "No problem — I'll show you the finest options across America. What budget range works for you?",
       { chips: intent.current === "rent" ? RENT_BUDGET_CHIPS : BUY_BUDGET_CHIPS }
     );
   };
@@ -282,7 +300,7 @@ export function Chatbot() {
     }
 
     // Greetings
-    if (/^(hi|hii+|hello|hey|good (morning|afternoon|evening)|how far)\b/.test(text)) {
+    if (/^(hi|hii+|hello|hey|good (morning|afternoon|evening))\b/.test(text)) {
       pushBot("Hello! Lovely to meet you. Are you looking to buy, rent, or just exploring?", {
         chips: WELCOME_CHIPS,
       });
@@ -303,7 +321,7 @@ export function Chatbot() {
       intent.current = "buy";
       setStage("location");
       pushBot(
-        "Excellent — buying! Which area of Lagos are you drawn to?",
+        "Excellent — buying! Which of our markets are you drawn to?",
         { chips: LOCATION_CHIPS }
       );
       return;
@@ -312,7 +330,7 @@ export function Chatbot() {
       intent.current = "rent";
       setStage("location");
       pushBot(
-        "Certainly — renting! Which area of Lagos would you like to live in?",
+        "Certainly — renting! Which of our markets would you like to live in?",
         { chips: LOCATION_CHIPS }
       );
       return;
@@ -347,13 +365,12 @@ export function Chatbot() {
       return;
     }
 
-    // Location
-    const area = ["lekki", "victoria island", "vi", "ikoyi", "ikeja", "ajah"].find((a) =>
-      text.includes(a)
+    // Location — match any known U.S. market or neighborhood keyword on word boundaries
+    const matchedArea = Object.keys(AREA_ALIASES).find((a) =>
+      new RegExp(`\\b${a.replace(" ", "\\s+")}\\b`).test(text)
     );
-    if (area) {
-      const mapped =
-        area === "vi" ? "Victoria Island" : area.charAt(0).toUpperCase() + area.slice(1);
+    if (matchedArea) {
+      const mapped = AREA_ALIASES[matchedArea];
       if (stage === "location") {
         handleLocationChip(mapped);
       } else {
@@ -379,7 +396,7 @@ export function Chatbot() {
     const typeMatch = PROPERTIES.filter((p) =>
       text.includes(p.type.toLowerCase().split(" ")[0])
     );
-    if (typeMatch.length > 0 && /\b(duplex|apartment|penthouse|bungalow|mansion|semi|terraced)\b/.test(text)) {
+    if (typeMatch.length > 0 && /\b(estate|villa|penthouse|townhouse|condominium|condo|mansion|chalet|apartment)\b/.test(text)) {
       pushBot("Here's what we currently have in that style:", {
         cards: typeMatch.slice(0, 3),
         chips: MAIN_CHIPS,
@@ -418,13 +435,13 @@ export function Chatbot() {
       if (chip === "Looking to Buy") {
         intent.current = "buy";
         setStage("location");
-        pushBot("Excellent — buying! Which area of Lagos are you drawn to?", {
+        pushBot("Excellent — buying! Which of our markets are you drawn to?", {
           chips: LOCATION_CHIPS,
         });
       } else if (chip === "Looking to Rent") {
         intent.current = "rent";
         setStage("location");
-        pushBot("Certainly — renting! Which area of Lagos would you like to live in?", {
+        pushBot("Certainly — renting! Which of our markets would you like to live in?", {
           chips: LOCATION_CHIPS,
         });
       } else {

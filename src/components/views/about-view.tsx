@@ -39,17 +39,17 @@ const SERVICES = [
   {
     icon: KeyRound,
     title: "Buying & Acquisition",
-    body: "Shortlisting, negotiation, title verification, survey coordination and full closing support for homes across Lagos.",
+    body: "Shortlisting, negotiation, title review, inspection coordination and full closing support for homes across our five signature markets.",
   },
   {
     icon: Building2,
     title: "Leasing & Rentals",
-    body: "Serviced apartments and family homes for individuals, families and corporate tenants — with transparent service-charge breakdowns.",
+    body: "Serviced apartments and family homes for individuals, families and corporate tenants — with transparent lease and HOA breakdowns.",
   },
   {
     icon: TrendingUp,
     title: "Investment Advisory",
-    body: "Yield analysis, off-plan opportunities and portfolio guidance for investors building wealth through Lagos real estate.",
+    body: "Yield analysis, pre-construction opportunities and portfolio guidance for investors building wealth through U.S. real estate.",
   },
   {
     icon: Calculator,
@@ -58,8 +58,8 @@ const SERVICES = [
   },
   {
     icon: Globe2,
-    title: "Diaspora Services",
-    body: "Live video tours, verified reporting and trusted representatives for Nigerians abroad buying back home.",
+    title: "Relocation Services",
+    body: "Live video tours, verified reporting and trusted representatives for clients relocating to the U.S. from abroad.",
   },
   {
     icon: HandHeart,
@@ -98,7 +98,7 @@ export function AboutView() {
       <section className="relative overflow-hidden bg-navy-deep pb-20 pt-[76px]">
         <img
           src="/images/about.jpg"
-          alt="Lagos city skyline"
+          alt="Modern luxury residence exterior"
           className="absolute inset-0 h-full w-full object-cover opacity-40"
         />
         <div className="hero-overlay absolute inset-0" aria-hidden="true" />
@@ -109,10 +109,10 @@ export function AboutView() {
               Homes Are Personal. <em className="text-gold">So Are We.</em>
             </h1>
             <p className="mt-6 text-base leading-relaxed text-ivory/85">
-              Havenstone Realty was founded in 2010 on a simple observation: Lagos property was
-              full of noise, and buyers deserved quieter, wiser counsel. Fifteen years later, we
-              remain a deliberately boutique agency — small enough to know every client, large
-              enough to move quickly.
+              Havenstone Realty was founded in 2010 on a simple observation: the American
+              luxury market was full of noise, and buyers deserved quieter, wiser counsel.
+              Fifteen years later, we remain a deliberately boutique agency — small enough to
+              know every client, large enough to move quickly.
             </p>
           </Reveal>
         </div>
@@ -136,9 +136,9 @@ export function AboutView() {
             <h2 className="mt-5 font-serif text-2xl text-navy">Our Vision</h2>
             <div className="gold-rule mt-4" />
             <p className="mt-5 text-[0.95rem] leading-[1.85] text-charcoal/85">
-              A Lagos property market where verified listings are the norm, service charges are
-              explained upfront, and every buyer — from first renter to billionaire collector —
-              is treated with the same care.
+              A U.S. luxury market where verified listings are the norm, HOA and service
+              charges are explained upfront, and every buyer — from first renter to
+              billionaire collector — is treated with the same care.
             </p>
           </Reveal>
         </div>

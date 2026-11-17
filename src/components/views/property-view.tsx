@@ -74,7 +74,7 @@ export function PropertyView({ id }: { id: string }) {
   const facts = [
     { icon: BedDouble, label: "Bedrooms", value: `${p.bedrooms}` },
     { icon: Bath, label: "Bathrooms", value: `${p.bathrooms}` },
-    { icon: Ruler, label: "Floor Area", value: `${p.sizeSqm.toLocaleString()} m²` },
+    { icon: Ruler, label: "Interior Area", value: `${p.sizeSqft.toLocaleString()} sq ft` },
     { icon: Building2, label: "Property Type", value: p.type },
     { icon: CalendarDays, label: "Year Built", value: `${p.yearBuilt}` },
     { icon: Tag, label: "Status", value: p.status },
@@ -434,7 +434,7 @@ function EnquiryForm({
             type="tel"
             value={values.phone}
             onChange={set("phone")}
-            placeholder="+234 8XX XXX XXXX"
+            placeholder="+1 (555) 000-0000"
             className={inputCls("phone")}
             aria-invalid={!!errors.phone}
           />

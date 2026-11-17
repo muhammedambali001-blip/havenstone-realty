@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "query": "Palm Beach Florida upscale estate street with lush palm trees",
+  "count": 4,
+  "ranked": true,
+  "captioned_count": 4,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/497c379f3485.jpg",
+      "caption": "Palm-lined tropical street with pink Mediterranean-style buildings, arched colonnades, clear blue sky; high clarity, no watermark; suitable for background image",
+      "source": "Veranda",
+      "original_width": "1200px",
+      "original_height": "675px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/93f462ed20b3.jpg",
+      "caption": "Aerial view of a pink beachfront mansion with palm trees and pool, sandy beach, turquoise ocean waves. Suitable for background image.",
+      "source": "Miami New Times",
+      "original_width": "3000px",
+      "original_height": "2250px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/939e8aaf9084.jpg",
+      "caption": "Aerial view of luxurious Mediterranean-style mansions with terracotta roofs surrounded by lush palm trees and manicured lawns under blue sky.",
+      "source": "Geoff Braboy",
+      "original_width": "1280px",
+      "original_height": "800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ce0c57b33b9f.jpg",
+      "caption": "A luxurious white Mediterranean-style villa with green shutters, swimming pool, palm trees, and manicured lawn under blue sky. suitable for background image",
+      "source": "Serhant | The Matt and Nick Team",
+      "original_width": "2500px",
+      "original_height": "1667px"
+    }
+  ]
+}

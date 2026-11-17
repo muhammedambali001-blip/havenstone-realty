@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { buildSearchUrl, type SearchQuery } from "@/lib/router";
 import {
   filterProperties,
+  formatCompactUSD,
   LOCATIONS,
   PROPERTIES,
   PROPERTY_TYPES,
@@ -14,24 +15,39 @@ import {
 import { PropertyCard } from "@/components/site/property-card";
 import { Reveal } from "@/components/site/reveal";
 
-const MIN_OPTIONS = [
-  { label: "Min Price", value: "" },
-  { label: "₦10M", value: "10000000" },
-  { label: "₦25M", value: "25000000" },
-  { label: "₦50M", value: "50000000" },
-  { label: "₦100M", value: "100000000" },
-  { label: "₦200M", value: "200000000" },
-  { label: "₦400M", value: "400000000" },
-  { label: "₦700M", value: "700000000" },
+const SALE_MIN_OPTIONS = [
+  { label: "No minimum", value: "" },
+  { label: "$1M", value: "1000000" },
+  { label: "$2M", value: "2000000" },
+  { label: "$3M", value: "3000000" },
+  { label: "$5M", value: "5000000" },
+  { label: "$8M", value: "8000000" },
+  { label: "$12M", value: "12000000" },
 ];
 
-const MAX_OPTIONS = [
-  { label: "Max Price", value: "" },
-  { label: "₦50M", value: "50000000" },
-  { label: "₦100M", value: "100000000" },
-  { label: "₦250M", value: "250000000" },
-  { label: "₦500M", value: "500000000" },
-  { label: "₦1B", value: "1000000000" },
+const SALE_MAX_OPTIONS = [
+  { label: "No maximum", value: "" },
+  { label: "$2M", value: "2000000" },
+  { label: "$5M", value: "5000000" },
+  { label: "$8M", value: "8000000" },
+  { label: "$15M", value: "15000000" },
+  { label: "$25M", value: "25000000" },
+];
+
+const RENT_MIN_OPTIONS = [
+  { label: "No minimum", value: "" },
+  { label: "$5K / mo", value: "5000" },
+  { label: "$10K / mo", value: "10000" },
+  { label: "$15K / mo", value: "15000" },
+  { label: "$20K / mo", value: "20000" },
+];
+
+const RENT_MAX_OPTIONS = [
+  { label: "No maximum", value: "" },
+  { label: "$8K / mo", value: "8000" },
+  { label: "$12K / mo", value: "12000" },
+  { label: "$18K / mo", value: "18000" },
+  { label: "$25K / mo", value: "25000" },
 ];
 
 const selectCls =
@@ -130,12 +146,20 @@ export function ListingsView({ query }: { query: SearchQuery }) {
   const update = (field: keyof typeof EMPTY_FILTERS) => (v: string) =>
     setDraft((d) => ({ ...d, [field]: v }));
 
+  // Switching between Buy and Rent switches the currency scale —
+  // stale sale-price filters would hide every rental, so clear them.
+  const updateStatus = (v: string) =>
+    setDraft((d) => ({ ...d, status: v, min: "", max: "" }));
+
+  const minOptions = draft.status === "For Rent" ? RENT_MIN_OPTIONS : SALE_MIN_OPTIONS;
+  const maxOptions = draft.status === "For Rent" ? RENT_MAX_OPTIONS : SALE_MAX_OPTIONS;
+
   const activeChips = [
     applied.location !== "anywhere" && `Location: ${applied.location}`,
     applied.type !== "any" && `Type: ${applied.type}`,
     applied.status !== "any" && applied.status,
-    applied.min && `From ₦${Number(applied.min) / 1000000}M`,
-    applied.max && `Up to ₦${Number(applied.max) / 1000000000}B`,
+    applied.min && `From ${formatCompactUSD(Number(applied.min))}${applied.status === "For Rent" ? " / mo" : ""}`,
+    applied.max && `Up to ${formatCompactUSD(Number(applied.max))}${applied.status === "For Rent" ? " / mo" : ""}`,
     applied.beds && `${applied.beds}+ beds`,
   ].filter(Boolean) as string[];
 
@@ -149,8 +173,8 @@ export function ListingsView({ query }: { query: SearchQuery }) {
             Properties for <em className="text-gold">Sale &amp; Rent</em>
           </h1>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ivory/70">
-            Browse our current listings across Lagos. For rentals, prices shown are per annum.
-            Every property has been inspected and title-verified by our team.
+            Browse our current listings across the United States. For rentals, prices shown
+            are per month. Every property has been inspected and title-verified by our team.
           </p>
         </div>
       </section>
@@ -168,7 +192,7 @@ export function ListingsView({ query }: { query: SearchQuery }) {
         >
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-7">
             <Select label="Location" value={draft.location} onChange={update("location")}>
-              <option value="anywhere">Anywhere in Lagos</option>
+              <option value="anywhere">Anywhere in the U.S.</option>
               {LOCATIONS.map((l) => (
                 <option key={l} value={l}>
                   {l}
@@ -183,22 +207,22 @@ export function ListingsView({ query }: { query: SearchQuery }) {
                 </option>
               ))}
             </Select>
-            <Select label="Status" value={draft.status} onChange={update("status")}>
+            <Select label="Status" value={draft.status} onChange={updateStatus}>
               <option value="any">Buy or Rent</option>
               <option value="For Sale">For Sale</option>
               <option value="For Rent">For Rent</option>
             </Select>
             <Select label="Minimum Price" value={draft.min} onChange={update("min")}>
-              {MIN_OPTIONS.map((o) => (
+              {minOptions.map((o) => (
                 <option key={o.label} value={o.value}>
-                  {o.label === "Min Price" ? "No minimum" : o.label}
+                  {o.label === "No minimum" ? "No minimum" : o.label}
                 </option>
               ))}
             </Select>
             <Select label="Maximum Price" value={draft.max} onChange={update("max")}>
-              {MAX_OPTIONS.map((o) => (
+              {maxOptions.map((o) => (
                 <option key={o.label} value={o.value}>
-                  {o.label === "Max Price" ? "No maximum" : o.label}
+                  {o.label === "No maximum" ? "No maximum" : o.label}
                 </option>
               ))}
             </Select>

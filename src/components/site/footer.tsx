@@ -45,13 +45,13 @@ export function Footer() {
               </span>
               <span className="flex flex-col leading-none">
                 <span className="font-serif text-lg tracking-[0.08em] text-ivory">HAVENSTONE</span>
-                <span className="eyebrow mt-1 text-[0.6rem] text-gold">Realty · Lagos</span>
+                <span className="eyebrow mt-1 text-[0.6rem] text-gold">Realty · United States</span>
               </span>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed">
-              Havenstone Realty curates exceptional homes across Lagos — matching discerning
-              clients with residences worthy of their lives, from Old Ikoyi penthouses to
-              garden duplexes in Lekki.
+              Havenstone Realty curates exceptional homes across America — matching
+              discerning clients with residences worthy of their lives, from Manhattan
+              penthouses to oceanfront estates in Palm Beach.
             </p>
             <div className="mt-6 flex items-start gap-2 rounded-md border border-gold/25 bg-navy/60 p-3 text-xs leading-relaxed text-ivory/55">
               <Info className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
@@ -119,8 +119,8 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
                 <span>
-                  Mon – Fri: 8:30 AM – 6:00 PM
-                  <span className="block text-xs text-ivory/45">Sat: 10:00 AM – 4:00 PM</span>
+                  Mon – Fri: 9:00 AM – 6:00 PM ET
+                  <span className="block text-xs text-ivory/45">Sat: 10:00 AM – 4:00 PM ET</span>
                 </span>
               </li>
             </ul>
@@ -164,7 +164,7 @@ export function Footer() {
           </p>
           <p className="flex items-center gap-2">
             <span className="inline-block h-1.5 w-1.5 rotate-45 bg-gold/70" aria-hidden="true" />
-            Luxury Properties · Lagos, Nigeria
+            Luxury Properties · United States
           </p>
         </div>
       </div>

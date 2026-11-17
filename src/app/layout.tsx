@@ -16,14 +16,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Havenstone Realty — Luxury Properties in Lagos, Nigeria",
+  title: "Havenstone Realty — Luxury Properties Across the United States",
   description:
-    "Discover exceptional homes for sale and to rent across Lagos — Ikoyi, Victoria Island, Lekki, Ikeja and Ajah. Havenstone Realty is a demonstration real estate agency website.",
+    "Discover exceptional homes for sale and to rent across America — New York, Los Angeles, Miami, Palm Beach and Aspen. Havenstone Realty is a demonstration real estate agency website.",
   keywords: [
     "Havenstone Realty",
-    "luxury real estate Lagos",
-    "property for sale Lagos",
-    "houses for rent Nigeria",
+    "luxury real estate USA",
+    "property for sale New York",
+    "luxury homes Los Angeles",
+    "real estate Miami",
   ],
 };
 

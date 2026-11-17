@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "query": "Manhattan New York City skyline with skyscrapers seen from the water at dusk",
+  "count": 4,
+  "ranked": true,
+  "captioned_count": 4,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c56df557ebdf.jpg",
+      "caption": "New York City skyline silhouette at sunset, vibrant pink and orange sky reflecting on calm water, crescent moon above. suitable for background image",
+      "source": "Paul Reiffer",
+      "original_width": "2100px",
+      "original_height": "1400px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2921ad7ad60e.jpg",
+      "caption": "New York City skyline at night, illuminated skyscrapers and Brooklyn Bridge reflected on water. Suitable for background image.",
+      "source": "Wallpaper Abyss - Alpha Coders",
+      "original_width": "1920px",
+      "original_height": "1080px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4561cf298bac.jpg",
+      "caption": "Lower Manhattan skyline at dusk with One World Trade Center, viewed across a dark waterfront pier; contains Alamy watermarks and image ID text.",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e703b7d42e34.jpg",
+      "caption": "Sunset over Manhattan skyline behind Brooklyn Bridge, golden sunlight reflecting on river, boat passing; high clarity, no watermark. Suitable for background image.",
+      "source": "Civitatis",
+      "original_width": "1280px",
+      "original_height": "853px"
+    }
+  ]
+}

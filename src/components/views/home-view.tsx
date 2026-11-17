@@ -32,23 +32,39 @@ import {
 import { PropertyCard } from "@/components/site/property-card";
 import { Reveal } from "@/components/site/reveal";
 
-const PRICE_STEPS = [
+const SALE_MIN_STEPS = [
   { label: "No minimum", value: "" },
-  { label: "₦50M", value: "50000000" },
-  { label: "₦100M", value: "100000000" },
-  { label: "₦150M", value: "150000000" },
-  { label: "₦250M", value: "250000000" },
-  { label: "₦400M", value: "400000000" },
-  { label: "₦700M", value: "700000000" },
+  { label: "$1M", value: "1000000" },
+  { label: "$2M", value: "2000000" },
+  { label: "$3M", value: "3000000" },
+  { label: "$5M", value: "5000000" },
+  { label: "$8M", value: "8000000" },
+  { label: "$12M", value: "12000000" },
 ];
 
-const PRICE_MAX_STEPS = [
+const SALE_MAX_STEPS = [
   { label: "No maximum", value: "" },
-  { label: "₦100M", value: "100000000" },
-  { label: "₦250M", value: "250000000" },
-  { label: "₦500M", value: "500000000" },
-  { label: "₦750M", value: "750000000" },
-  { label: "₦1B", value: "1000000000" },
+  { label: "$2M", value: "2000000" },
+  { label: "$5M", value: "5000000" },
+  { label: "$8M", value: "8000000" },
+  { label: "$15M", value: "15000000" },
+  { label: "$25M", value: "25000000" },
+];
+
+const RENT_MIN_STEPS = [
+  { label: "No minimum", value: "" },
+  { label: "$5K / mo", value: "5000" },
+  { label: "$10K / mo", value: "10000" },
+  { label: "$15K / mo", value: "15000" },
+  { label: "$20K / mo", value: "20000" },
+];
+
+const RENT_MAX_STEPS = [
+  { label: "No maximum", value: "" },
+  { label: "$8K / mo", value: "8000" },
+  { label: "$12K / mo", value: "12000" },
+  { label: "$18K / mo", value: "18000" },
+  { label: "$25K / mo", value: "25000" },
 ];
 
 const selectCls =
@@ -85,6 +101,10 @@ export function HeroSearch({ className }: { className?: string }) {
   const [max, setMax] = useState("");
   const [beds, setBeds] = useState("");
 
+  const isRent = status === "For Rent";
+  const minSteps = isRent ? RENT_MIN_STEPS : SALE_MIN_STEPS;
+  const maxSteps = isRent ? RENT_MAX_STEPS : SALE_MAX_STEPS;
+
   const search = () => {
     window.location.hash = buildSearchUrl({
       location: location || "anywhere",
@@ -111,7 +131,11 @@ export function HeroSearch({ className }: { className?: string }) {
           <button
             key={s}
             type="button"
-            onClick={() => setStatus(s)}
+            onClick={() => {
+              setStatus(s);
+              setMin("");
+              setMax("");
+            }}
             aria-pressed={status === s}
             className={cn(
               "h-full flex-1 px-2 text-[0.72rem] font-semibold uppercase tracking-[0.1em] transition-colors",
@@ -125,7 +149,7 @@ export function HeroSearch({ className }: { className?: string }) {
 
       <Field icon={MapPin} label="Location">
         <select value={location} onChange={(e) => setLocation(e.target.value)} className={selectCls} aria-label="Location">
-          <option value="">Anywhere in Lagos</option>
+          <option value="">Anywhere in the U.S.</option>
           {LOCATIONS.map((l) => (
             <option key={l} value={l}>
               {l}
@@ -148,7 +172,7 @@ export function HeroSearch({ className }: { className?: string }) {
       <div className="col-span-2 grid grid-cols-2 gap-3 lg:col-span-2">
         <Field icon={Wallet} label="Min Price">
           <select value={min} onChange={(e) => setMin(e.target.value)} className={selectCls} aria-label="Minimum price">
-            {PRICE_STEPS.map((s) => (
+            {minSteps.map((s) => (
               <option key={s.label} value={s.value}>
                 {s.label}
               </option>
@@ -157,7 +181,7 @@ export function HeroSearch({ className }: { className?: string }) {
         </Field>
         <Field icon={Wallet} label="Max Price">
           <select value={max} onChange={(e) => setMax(e.target.value)} className={selectCls} aria-label="Maximum price">
-            {PRICE_MAX_STEPS.map((s) => (
+            {maxSteps.map((s) => (
               <option key={s.label} value={s.value}>
                 {s.label}
               </option>
@@ -200,7 +224,7 @@ const WHY_US = [
   {
     icon: Compass,
     title: "Deep Local Knowledge",
-    body: "From flood lines in Ajah to the quietest closes in Old Ikoyi, our advisors live where they sell. We will tell you honestly which street fits your life and budget.",
+    body: "From hillside ordinances in the Hollywood Hills to flood-zone codes in Palm Beach, our advisors live where they sell. We will tell you honestly which street fits your life and budget.",
   },
   {
     icon: KeyRound,
@@ -215,9 +239,9 @@ const WHY_US = [
 ];
 
 const STATS = [
-  { icon: Award, value: "15+", label: "Years in Lagos real estate" },
+  { icon: Award, value: "15+", label: "Years in U.S. luxury real estate" },
   { icon: Users, value: "250+", label: "Families successfully placed" },
-  { icon: TrendingUp, value: "₦85B+", label: "In completed transactions" },
+  { icon: TrendingUp, value: "$3.5B+", label: "In completed transactions" },
   { icon: BadgeCheck, value: "98%", label: "Clients who would recommend us" },
 ];
 
@@ -237,21 +261,21 @@ export function HomeView() {
         <div className="relative min-h-[92vh] overflow-hidden bg-navy-deep pb-40 pt-[76px]">
           <img
             src="/images/hero.jpg"
-            alt="Luxury modern residence with a swimming pool at dusk in Lagos"
+            alt="Luxury modern residence with a swimming pool at dusk"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="hero-overlay absolute inset-0" aria-hidden="true" />
           <div className="relative mx-auto flex min-h-[calc(92vh-76px)] max-w-7xl flex-col justify-center px-4 py-16 sm:px-6 lg:px-8">
             <Reveal className="max-w-3xl">
-              <p className="eyebrow text-gold">Lagos · Luxury Properties · Est. 2010</p>
+              <p className="eyebrow text-gold">New York · Los Angeles · Miami · Est. 2010</p>
               <h1 className="mt-5 font-serif text-4xl leading-[1.12] text-white sm:text-5xl lg:text-[3.6rem]">
                 Find a Place That{" "}
                 <em className="text-gold">Feels Like Home.</em>
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/85 sm:text-lg">
-                Discover exceptional properties across Lagos — from lagoon-view penthouses in
-                Ikoyi to garden family duplexes in Lekki. Our advisors walk with you from first
-                search to final key handover.
+                Discover exceptional properties across America — from sky-high Manhattan
+                penthouses to oceanfront estates in Palm Beach. Our advisors walk with you from
+                first search to final key handover.
               </p>
               <div className="mt-9 flex flex-wrap gap-4">
                 <a
@@ -338,9 +362,10 @@ export function HomeView() {
               </h2>
               <div className="gold-rule mt-5" />
               <p className="mt-6 text-[0.95rem] leading-relaxed text-ivory/75">
-                Lagos property moves fast, and trust is the only currency that matters. We built
-                Havenstone around a simple promise: honest advice, verified homes and service
-                that treats your budget with respect — whether it is ₦12 million or ₦1.2 billion.
+                The American luxury market moves fast, and trust is the only currency that
+                matters. We built Havenstone around a simple promise: honest advice, verified
+                homes and service that treats your budget with respect — whether it is $800,000
+                or $25 million.
               </p>
               <a
                 href={ROUTES.about}
@@ -373,10 +398,10 @@ export function HomeView() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className="eyebrow text-gold">Where We Operate</p>
-            <h2 className="mt-3 font-serif text-3xl text-navy sm:text-4xl">Popular Lagos Locations</h2>
+            <h2 className="mt-3 font-serif text-3xl text-navy sm:text-4xl">Our Signature Markets</h2>
             <div className="gold-rule mx-auto mt-5" />
             <p className="mt-5 text-[0.95rem] leading-relaxed text-slate-mute">
-              Five districts, five distinct ways to live in Lagos. Explore the neighbourhoods
+              Five markets, five distinct ways to live in America. Explore the neighborhoods
               our clients love most.
             </p>
           </Reveal>
@@ -396,7 +421,7 @@ export function HomeView() {
                   >
                     <img
                       src={loc.image}
-                      alt={`${loc.area}, Lagos`}
+                      alt={`${loc.area}, United States`}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
                     />

@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "query": "Aspen Colorado mountain town skyline with snow-capped Rocky Mountains",
+  "count": 4,
+  "ranked": true,
+  "captioned_count": 4,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f87a3467c21a.jpg",
+      "caption": "Historic Victorian building decorated with Christmas garlands, snow-covered mountain slope and trees behind; contains Alamy watermarks.",
+      "source": "Alamy",
+      "original_width": "866px",
+      "original_height": "1390px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d24fecf8a6a8.jpg",
+      "caption": "A snowy mountain landscape with bare winter trees in the foreground, distant buildings, and clear blue sky; high clarity, no watermarks, suitable for background image.",
+      "source": "www.expedia.co.jp",
+      "original_width": "3840px",
+      "original_height": "2160px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/42544ba57483.jpg",
+      "caption": "Aerial view of a snow-covered mountain town with pine trees and buildings. Suitable for background image.",
+      "source": "duPont REGISTRY News",
+      "original_width": "1800px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/866f31d84f54.jpg",
+      "caption": "Thumbnail of snowy Aspen mountains with a woman smiling; yellow text reads \"Aspen\".",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    }
+  ]
+}

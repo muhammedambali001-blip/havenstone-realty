@@ -31,7 +31,7 @@ function BrandMark({ dark }: { dark?: boolean }) {
         <span className={cn("font-serif text-lg tracking-[0.08em]", dark ? "text-ivory" : "text-white")}>
           HAVENSTONE
         </span>
-        <span className="eyebrow mt-1 text-[0.6rem] text-gold">Realty · Lagos</span>
+        <span className="eyebrow mt-1 text-[0.6rem] text-gold">Realty · United States</span>
       </span>
     </a>
   );
